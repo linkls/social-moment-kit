@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>朋友圈与社交距离感手册 · 24 条动态发布规则</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+html,body{background:#F1EAE1}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  color:#33403D;font-size:16px;line-height:1.72;-webkit-font-smoothing:antialiased}
+
+/* ---------- 布局 ---------- */
+.wrap{max-width:430px;margin:0 auto;background:#FAF7F2;min-height:100vh;box-shadow:0 0 60px rgba(80,90,84,.08)}
+@media(min-width:900px){
+  .wrap{max-width:1060px;display:flex;align-items:flex-start;background:#FAF7F2;padding:0}
+  .side{width:266px;flex:0 0 266px;position:sticky;top:0;height:100vh;overflow-y:auto;background:#F5EFE7;border-right:1px solid #EAE1D5;padding:26px 16px 40px}
+  .main{flex:1;min-width:0;padding:0 34px 70px}
+  .mobilenav{display:none}
+  .topbar{display:block !important}
+}
+.main{padding:0 20px 70px}
+.side{display:none}
+.mobilenav{display:block;position:sticky;top:0;z-index:30;background:rgba(250,247,242,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid #EFE8DF;padding:10px 0 9px}
+.mobilenav .mrow{display:flex;gap:7px;overflow-x:auto;padding:0 16px;-webkit-overflow-scrolling:touch}
+.mobilenav .mrow::-webkit-scrollbar{display:none}
+.mchip{flex:0 0 auto;white-space:nowrap;font-size:12px;font-weight:700;color:#6B7A76;border:1px solid #EAE1D5;
+  background:#fff;border-radius:999px;padding:5px 12px;text-decoration:none}
+.mchip.on{background:#4E8C84;border-color:#4E8C84;color:#fff}
+
+/* ---------- 通用 ---------- */
+.eyebrow{font-size:12px;letter-spacing:.18em;color:#9AA8A4;font-weight:600}
+.h1{font-size:28px;line-height:1.3;font-weight:800;letter-spacing:-.01em}
+.lede{color:#63736F;font-size:14.5px}
+.tag{display:inline-block;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700;background:#EAF3F0;color:#4E8C84}
+.tag.a{background:#FBEADC;color:#B46B3C}.tag.c{background:#ECE9F7;color:#6E65A8}
+.tag.d{background:#E3ECF5;color:#4B7196}
+.muted{color:#8C9A96;font-size:12.5px;line-height:1.8}
+.card{background:#fff;border-radius:22px;padding:20px 18px;box-shadow:0 6px 22px rgba(74,90,84,.07)}
+.rule{height:1px;background:#EFE8DF;margin:22px 0}
+.kicker{font-size:12px;letter-spacing:.16em;color:#9AA8A4;font-weight:700}
+
+/* ---------- 封面 ---------- */
+.cover{padding:40px 0 10px}
+.cover .h1{margin:12px 0 10px}
+.cover .lede{margin:0 0 16px}
+.cover .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.chip{background:#fff;border:1px solid #EEE5DA;border-radius:999px;padding:6px 13px;font-size:12.5px;color:#5C6B67;font-weight:600}
+.topbar{display:none}
+
+/* ---------- 目录（侧栏） ---------- */
+.side .st{font-size:12px;letter-spacing:.16em;color:#9AA8A4;font-weight:700;margin:0 6px 14px}
+.side .sp{font-size:12.5px;font-weight:800;color:#33403D;margin:20px 6px 8px;display:flex;align-items:center;gap:7px}
+.side .sp .n{width:20px;height:20px;border-radius:7px;background:#EDE5DA;color:#8C9A96;font-size:11px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.side a{list-style:none;text-decoration:none;display:flex;align-items:center;gap:8px;font-size:13px;color:#6B7A76;
+  padding:7px 10px;border-radius:10px;line-height:1.5}
+.side a:hover{background:#EFE7DC}
+.side a .st2{flex:0 0 auto;font-size:10px;font-weight:800;color:#fff;background:#71B0A4;border-radius:5px;padding:1px 5px}
+.side a .st3{flex:0 0 auto;font-size:10px;font-weight:700;color:#B0B8B4;border:1px solid #E3DCD2;border-radius:5px;padding:1px 5px}
+.side a.open{color:#33403D;font-weight:700;background:#fff;box-shadow:0 3px 10px rgba(74,90,84,.06)}
+
+/* ---------- 8 类人格 ---------- */
+.types{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+@media(min-width:900px){.types{grid-template-columns:repeat(4,1fr)}}
+.tcard{background:#fff;border-radius:16px;padding:13px 13px;box-shadow:0 4px 14px rgba(74,90,84,.06);border-left:3px solid #71B0A4}
+.tcard.b1{border-left-color:#E9A178}.tcard.b2{border-left-color:#8E86C4}.tcard.b3{border-left-color:#5B7FA6}.tcard.b4{border-left-color:#C9A15E}
+.tcard .tn{font-size:14px;font-weight:800;line-height:1.4}
+.tcard .td{font-size:12px;color:#8C9A96;margin-top:5px;line-height:1.65}
+
+/* ---------- 速查表 ---------- */
+.qtwrap{background:#fff;border-radius:22px;padding:16px 12px 12px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:14px}
+.qt{width:100%;border-collapse:collapse;table-layout:fixed}
+.qt th,.qt td{border-bottom:1px dashed #EFE8DF;padding:9px 7px;vertical-align:top;text-align:left;font-size:11.5px;line-height:1.6}
+.qt th{font-size:11.5px;color:#8C9A96;font-weight:800}
+.qt tr:last-child td{border-bottom:0}
+.qt .pn{font-weight:800;color:#33403D;font-size:12px}
+.qt .sg{color:#8C9A96}
+.qt .ans{color:#4B5C58;font-weight:600}
+.qt th:nth-child(1),.qt td:nth-child(1){width:74px}
+.qt th:nth-child(2),.qt td:nth-child(2){width:82px}
+
+/* ---------- 章节 ---------- */
+.part{margin:38px 0 0}
+.part-h{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.part-h .pn{width:30px;height:30px;border-radius:10px;background:#4E8C84;color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.part-h .pt{font-size:18px;font-weight:800}
+.part-sub{color:#9AA8A4;font-size:12.5px;margin:0 0 16px 40px}
+.ch{background:#fff;border-radius:24px;padding:22px 18px;box-shadow:0 8px 26px rgba(74,90,84,.08);margin-bottom:16px;scroll-margin-top:64px}
+.ch .ck{font-size:11.5px;letter-spacing:.1em;color:#B0895F;font-weight:800}
+.ch .ct{font-size:21px;font-weight:800;line-height:1.4;margin:7px 0 4px}
+.ch .cs{font-size:13px;color:#9AA8A4;margin-bottom:6px}
+.blk{margin-top:18px;padding-top:16px;border-top:1px dashed #EFE8DF}
+.blk:first-of-type{border-top:0;padding-top:4px}
+.lbl{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:800;margin-bottom:11px}
+.lbl .n{width:22px;height:22px;border-radius:8px;background:#EAF3F0;color:#4E8C84;font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.blk p{font-size:14.5px;line-height:1.78;color:#4B5C58;margin-bottom:9px}
+.blk p:last-child{margin-bottom:0}
+.blk ul{list-style:none}
+.blk li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.75;color:#4B5C58;padding:5px 0}
+.blk li .d{flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#9CC4BC;margin-top:11px}
+.blk li b{color:#33403D}
+.say{display:flex;gap:12px;align-items:flex-start;background:#FAF7F2;border:1px solid #EFE7DC;border-radius:16px;padding:14px 15px;margin-bottom:10px}
+.say .sn{flex:0 0 auto;width:22px;height:22px;border-radius:8px;background:#71B0A4;color:#fff;font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-top:3px}
+.say .st{flex:1}
+.say .st .sh{font-size:12px;font-weight:800;color:#B0895F;margin-bottom:4px;letter-spacing:.02em}
+.say .st .sq{font-size:15px;line-height:1.78;color:#33403D}
+.say .st .sn2{font-size:12.5px;color:#9AA8A4;margin-top:6px}
+.say.b2 .sn{background:#E9A178}.say.b3 .sn{background:#8E86C4}
+.prac{background:#EAF4F1;border-radius:18px;padding:16px 15px;margin-top:16px}
+.prac .lbl .n{background:#4E8C84;color:#fff}
+.prac li .d{background:#71B0A4}
+.prac .lbl{color:#2F5F59}
+.prac p,.prac li{color:#3B5B57}
+.next{margin-top:14px;background:#FBEADC;border-radius:16px;padding:14px 15px}
+.next .lbl .n{background:#E9A178;color:#fff}
+.next .lbl{color:#8A5A2E}
+.next p{color:#6B4B2C}
+.chfoot{display:flex;gap:10px;margin-top:16px}
+.chfoot .rbtn{flex:1;text-align:center;padding:12px;border:0;border-radius:14px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;
+  background:#fff;border:1px solid #E9E1D6;color:#6B7A76;text-decoration:none}
+
+.tbd{background:#FBF7F0;border:1px dashed #E3DCD2;border-radius:20px;padding:20px 18px;margin-bottom:14px}
+.tbd .tt{font-size:16px;font-weight:800;color:#8C9A96}
+.tbd .td{font-size:13px;color:#A5AFA9;margin-top:7px;line-height:1.75}
+.tbd .td b{color:#7C8B87}
+
+.foot{text-align:center;color:#B0B8B4;font-size:11.5px;line-height:1.9;margin-top:34px;padding-top:20px;border-top:1px dashed #EFE8DF}
+.toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%) translateY(20px);background:rgba(40,52,49,.93);
+  color:#fff;padding:11px 20px;border-radius:14px;font-size:14px;opacity:0;pointer-events:none;transition:all .28s ease;z-index:99}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ---------- 产品15 追加 ---------- */
+.disc{background:#F7F3EC;border-radius:16px;padding:13px 14px;margin-top:18px;font-size:12.5px;line-height:1.8;color:#7C8A86}
+.disc b{color:#54635F}
+.main p{line-height:1.9}
+.rulecard{background:#fff;border-radius:20px;padding:15px 16px 14px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:12px}
+.rulecard .rh{display:flex;gap:9px;align-items:flex-start}
+.rulecard .rn{width:26px;height:26px;flex:0 0 26px;border-radius:9px;background:#EAF3F0;color:#4E8C84;font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.rulecard .rt{font-size:14.5px;font-weight:800;color:#33403D;line-height:1.6}
+.rulecard .rw{font-size:12.8px;line-height:1.85;color:#54635F;margin:10px 0 0}
+.rulecard .rw b{color:#3F4F4B}
+.rulecard .rd{font-size:12.8px;line-height:1.85;color:#6E7D79;margin:8px 0 0;padding-left:11px;border-left:2px solid #E7DFD3}
+.chk{background:#fff;border-radius:20px;padding:16px 16px 8px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:12px}
+.chk li{list-style:none;font-size:13px;line-height:1.85;color:#54635F;padding:6px 0;border-bottom:1px dashed #F0EAE1;display:flex;gap:9px}
+.chk li:last-child{border-bottom:none}
+.chk .bx{flex:0 0 15px;width:15px;height:15px;border-radius:4px;border:1.5px solid #C9D8D4;margin-top:5px}
+.bars{background:#fff;border-radius:20px;padding:16px 16px 18px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:14px}
+.bars .bt{font-size:13px;font-weight:800;color:#33403D;margin-bottom:14px}
+.barrow{margin-bottom:12px}
+.barrow .bl{display:flex;justify-content:space-between;font-size:12.5px;color:#54635F;font-weight:700;margin-bottom:6px}
+.barrow .bl span:last-child{color:#4E8C84;font-weight:800}
+.bar{height:9px;border-radius:99px;background:#EBE3D9;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178)}
+.scorebar{height:7px;border-radius:99px;background:#EBE3D9;overflow:hidden;margin:14px 0 6px}
+.scorebar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178)}
+.scoretxt{font-size:12px;color:#8C9A96;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside class="side">
+<div class="st">CONTENTS</div>
+<div class="sp"><span class="n">★</span>速查与自测</div>
+<a href="#quick" data-t="quick">24 条速查表</a>
+<a href="#test" data-t="test">朋友圈边界感小测</a>
+<a href="#check" data-t="check">发布前自检清单</a>
+<a href="#howto" data-t="howto">怎么用这本手册</a>
+<div class="sp"><span class="n">1</span>看得见的边界</div>
+<a href="#p1" data-t="p1">看得见的边界 6 条规则</a>
+<div class="sp"><span class="n">2</span>说不清的边界</div>
+<a href="#p2" data-t="p2">说不清的边界 6 条规则</a>
+<div class="sp"><span class="n">3</span>熟人边界</div>
+<a href="#p3" data-t="p3">熟人边界 6 条规则</a>
+<div class="sp"><span class="n">4</span>发出去之后</div>
+<a href="#p4" data-t="p4">发出去之后 6 条规则</a>
+</aside>
+  <div class="main">
+<div class="mobilenav"><div class="mrow">
+<a href="#top" class="mchip" data-c="top">封面</a>
+<a href="#quick" class="mchip" data-c="quick">速查表</a>
+<a href="#p1" class="mchip" data-c="p1">1 看得见</a>
+<a href="#p2" class="mchip" data-c="p2">2 说不清</a>
+<a href="#p3" class="mchip" data-c="p3">3 熟人</a>
+<a href="#p4" class="mchip" data-c="p4">4 发出后</a>
+<a href="#check" class="mchip" data-c="check">自检</a>
+<a href="#test" class="mchip" data-c="test">小测</a>
+</div></div>
+    <section class="cover" id="top">
+      <div class="eyebrow">MOMENT KIT</div>
+      <h1 class="h1">朋友圈与社交距离感手册</h1>
+      <p class="lede">发一条动态之前，先想清楚谁会看到。<br>24 条发布规则，分 4 部分，配速查表和小测。</p>
+      <div class="chips">
+        <span class="chip">4 部分 24 条规则</span>
+        <span class="chip">24 行速查表</span>
+        <span class="chip">10 条发布前自检</span>
+        <span class="chip">附 6 题边界感小测</span>
+      </div>
+    </section>
+
+    <div class="card">
+      <div class="kicker">怎么用这本手册</div>
+      <p>朋友圈的难处不在于发什么，而在于<b>你不知道谁在刷</b>。同一条内容，在同事眼里、在亲戚眼里、在客户眼里，是三件不同的事。</p>
+      <p>这本手册把发朋友圈的判断拆成 4 部分共 <b>24 条规则</b>：看得见的边界（分组、三天可见、不给谁看）、说不清的边界（抱怨、晒、求助、转发）、熟人边界（同事、领导、客户、亲戚、前任、家人）、发出去之后（撤回、被评论、点赞又不说话）。每条规则给三段：什么时候用、依据、可以怎么做。</p>
+      <div class="rule"></div>
+      <p class="muted">另有 24 行速查表、一页 10 条发布前自检清单、6 题「朋友圈边界感」小测。本资料为沟通参考，不构成专业心理评估、诊断或医疗建议；规则是参考判断不是标准答案，请按你自己的关系网调整。</p>
+    </div>
+
+    <section id="quick">
+      <h2>24 条速查表</h2>
+      <p class="muted">来不及读整本时看这张表：认出场景 → 一句话怎么说 → 补一个动作。</p>
+      <div class="qtwrap">
+        <table class="qt">
+          <thead><tr><th>场景</th><th>什么时候用</th><th>一句话怎么说</th><th>补一个动作</th></tr></thead>
+          <tbody>
+<tr><td class="pn">分组可见</td><td class="sg">一条里有同事和亲戚</td><td class="ans">分三组再发，别用群发</td><td class="sg">发前看一眼分组</td></tr>
+<tr><td class="pn">三天可见</td><td class="sg">想发点私事</td><td class="ans">三天只是缓兵之计</td><td class="sg">配分组一起用</td></tr>
+<tr><td class="pn">不给谁看</td><td class="sg">确定某个人会介意</td><td class="ans">提前设，别事后删</td><td class="sg">放进不给谁看</td></tr>
+<tr><td class="pn">合影</td><td class="sg">图里有好几个人</td><td class="ans">谁会介意就裁掉</td><td class="sg">逐个过一遍脸</td></tr>
+<tr><td class="pn">定位</td><td class="sg">随手带了位置</td><td class="ans">私人行程不发定位</td><td class="sg">想清楚谁在同城</td></tr>
+<tr><td class="pn">群发</td><td class="sg">想只发几个人</td><td class="ans">群发是挨个转发</td><td class="sg">定向就用分组</td></tr>
+<tr><td class="pn">抱怨</td><td class="sg">想说件糟心事</td><td class="ans">只说事不说人</td><td class="sg">去掉可识别细节</td></tr>
+<tr><td class="pn">气话</td><td class="sg">情绪比较重的一条</td><td class="ans">先放草稿箱过一夜</td><td class="sg">隔夜还值得再发</td></tr>
+<tr><td class="pn">晒成绩</td><td class="sg">要晒一次成果</td><td class="ans">晒结果不晒别人的份</td><td class="sg">问一句有没有别人的名字</td></tr>
+<tr><td class="pn">晒数字</td><td class="sg">晒收入或业绩</td><td class="ans">说量级不说具体数</td><td class="sg">数字往下拉一档</td></tr>
+<tr><td class="pn">求助</td><td class="sg">要发一条求助</td><td class="ans">写清事、需要、时间</td><td class="sg">情绪的话私下说</td></tr>
+<tr><td class="pn">转发</td><td class="sg">看到一篇好文章</td><td class="ans">先看原作者是谁</td><td class="sg">带人的先补判断</td></tr>
+<tr><td class="pn">同事</td><td class="sg">吐槽流程加班</td><td class="ans">工作不满单独说</td><td class="sg">朋友圈留给生活</td></tr>
+<tr><td class="pn">领导</td><td class="sg">动态跟公司有关</td><td class="ans">不涉及具体人和事</td><td class="sg">拿不准等两天</td></tr>
+<tr><td class="pn">客户</td><td class="sg">吐槽服务流程</td><td class="ans">删掉品类和流程名</td><td class="sg">只留行业观察</td></tr>
+<tr><td class="pn">亲戚</td><td class="sg">内容会被转述</td><td class="ans">假设被重复十遍</td><td class="sg">再发一遍</td></tr>
+<tr><td class="pn">前任</td><td class="sg">发新关系相关</td><td class="ans">默认分组可见</td><td class="sg">别赌对方那边</td></tr>
+<tr><td class="pn">家人</td><td class="sg">熬夜生病情绪低落</td><td class="ans">只发给信得过的人</td><td class="sg">别放公开动态</td></tr>
+<tr><td class="pn">撤回</td><td class="sg">发错了想撤</td><td class="ans">当下就撤</td><td class="sg">同时补正常内容</td></tr>
+<tr><td class="pn">撤回了</td><td class="sg">对方已经看到那条</td><td class="ans">补一句刚那条发错了</td><td class="sg">把空白填上</td></tr>
+<tr><td class="pn">被评论冒犯</td><td class="sg">评论区不好听</td><td class="ans">不回就是处理方式</td><td class="sg">一句定性就收住</td></tr>
+<tr><td class="pn">被问隐私</td><td class="sg">评论问收入感情</td><td class="ans">这个就不方便说了哈</td><td class="sg">转到别的话题</td></tr>
+<tr><td class="pn">点赞不说话</td><td class="sg">反复看那条动态</td><td class="ans">不解读不追问</td><td class="sg">有话直接单独聊</td></tr>
+<tr><td class="pn">被截图外传</td><td class="sg">动态被转到别处</td><td class="ans">不在评论区对线</td><td class="sg">能澄清就澄清一次</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+<section class="part" id="p1">
+<div class="part-h"><span class="pn">1</span><span class="pt">看得见的边界</span></div>
+<p class="part-sub">分组可见 · 三天可见 · 不给谁看 · 共 6 条规则</p>
+<div class="rulecard">
+<div class="rh"><div class="rn">1</div><div class="rt">分组按关系分，不按熟不熟分</div></div>
+<div class="rw"><b>什么时候用：</b>同一张照片里同时出现同事、客户、亲戚。</div>
+<div class="rd"><b>依据：</b>「熟」是程度，「关系」是场合。把同事当熟人发，是朋友圈里常踩的一脚。</div>
+<div class="rw"><b>可以这么做：</b>分三组：同事可见、熟人可见、不给谁看。发布前先看一遍分组，再点发送。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">2</div><div class="rt">三天可见不是保险箱</div></div>
+<div class="rw"><b>什么时候用：</b>你想发点私事，又怕被领导或客户看到。</div>
+<div class="rd"><b>依据：</b>三天可见解决的是「一直挂在那儿」，解决不了「这三天被谁看到」。</div>
+<div class="rw"><b>可以这么做：</b>三天可见只当缓兵之计，重要内容配分组，别指望它替你挡人。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">3</div><div class="rt">不给谁看要提前设，别发完再删</div></div>
+<div class="rw"><b>什么时候用：</b>你确认某个人看到这条会不舒服。</div>
+<div class="rd"><b>依据：</b>删掉旧动态没有用——截图已经在别人手机里，动态删了痕迹还在。</div>
+<div class="rw"><b>可以这么做：</b>发之前就把那个人放进「不给谁看」，这比事后补救干净得多。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">4</div><div class="rt">一张照片里有好几个人，先问一句</div></div>
+<div class="rw"><b>什么时候用：</b>合影里出现客户、领导、朋友、前任。</div>
+<div class="rd"><b>依据：</b>你只检查了画面好不好看，没检查里面每个人的处境。</div>
+<div class="rw"><b>可以这么做：</b>发之前在心里过一遍：这张图里有谁会介意？介意的人多，就裁掉或改分组。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">5</div><div class="rt">定位和位置标签会悄悄放大范围</div></div>
+<div class="rw"><b>什么时候用：</b>你随手带了个定位或位置标签。</div>
+<div class="rd"><b>依据：</b>标签会让同城的熟人更容易搜到你，也让「只给谁看」的错觉更不牢靠。</div>
+<div class="rw"><b>可以这么做：</b>涉及私人行程的动态不发定位；工作类动态用定位前先想一遍谁在同城。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">6</div><div class="rt">群发不等于分组可见</div></div>
+<div class="rw"><b>什么时候用：</b>你想只给特定的人看，复制粘贴群发了。</div>
+<div class="rd"><b>依据：</b>群发是挨个转发，漏一个就等于群发给了所有人，而且顺序很难还原。</div>
+<div class="rw"><b>可以这么做：</b>要定向就用分组可见；群发只用在「谁都能看」的内容上。</div>
+</div>
+</section>
+<section class="part" id="p2">
+<div class="part-h"><span class="pn">2</span><span class="pt">说不清的边界</span></div>
+<p class="part-sub">抱怨 · 晒 · 求助 · 转发 · 共 6 条规则</p>
+<div class="rulecard">
+<div class="rh"><div class="rn">1</div><div class="rt">抱怨只说事，不说人</div></div>
+<div class="rw"><b>什么时候用：</b>你憋着一件糟心事，想在朋友圈发泄一下。</div>
+<div class="rd"><b>依据：</b>没写名字，别人也会对号入座；写了名字，就成了公开的指认。</div>
+<div class="rw"><b>可以这么做：</b>把能识别具体人的细节去掉，只说事不说人：不说「他」，说「这件事」。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">2</div><div class="rt">发之前先想一句「会不会被截图」</div></div>
+<div class="rw"><b>什么时候用：</b>你打算发一段情绪比较重的话。</div>
+<div class="rd"><b>依据：</b>朋友圈是公开场合，一句气话被截图转出去，比原文传播得远。</div>
+<div class="rw"><b>可以这么做：</b>拿不准就先放草稿箱，过一晚上再看。隔夜还觉得值得发，再发。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">3</div><div class="rt">晒结果，不晒别人的那部分</div></div>
+<div class="rw"><b>什么时候用：</b>你要晒一次成绩、一次旅行、一次活动。</div>
+<div class="rd"><b>依据：</b>你的成果里往往有别人的付出，晒的时候容易把它整块带走。</div>
+<div class="rw"><b>可以这么做：</b>晒之前问自己一句：这里面有没有别人的名字、脸、或者他的那一份？</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">4</div><div class="rt">收入和数字类的，往下拉一档说</div></div>
+<div class="rw"><b>什么时候用：</b>你想晒收入、涨薪、成交额、奖金。</div>
+<div class="rd"><b>依据：</b>数字会被截图、被比较、被转述，越具体越容易被拿来做参照。</div>
+<div class="rw"><b>可以这么做：</b>说量级不说具体数：说「翻了一倍」不说「从五万到十万」，意思到了，靶子小了。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">5</div><div class="rt">求助写成可帮的，别写成诉苦</div></div>
+<div class="rw"><b>什么时候用：</b>你想发一条求助或者吐槽兼求助的动态。</div>
+<div class="rd"><b>依据：</b>诉苦式求助把情绪放在前面，读者接不住；可帮的求助对方知道该做什么。</div>
+<div class="rw"><b>可以这么做：</b>写清三件事：是什么事、需要什么、什么时候要。情绪的话留到私下说。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">6</div><div class="rt">转发之前先看一眼原作者是谁</div></div>
+<div class="rw"><b>什么时候用：</b>你看到一篇写得不错想转。</div>
+<div class="rd"><b>依据：</b>转发会把原作者和你一起推到对方视野里，作者的身份你未必清楚。</div>
+<div class="rw"><b>可以这么做：</b>转之前看作者主页、看配图里的人是谁。带人的文章，转发前在评论区补一句你的判断。</div>
+</div>
+</section>
+<section class="part" id="p3">
+<div class="part-h"><span class="pn">3</span><span class="pt">熟人边界</span></div>
+<p class="part-sub">同事 · 领导 · 客户 · 亲戚 · 前任 · 家人 · 共 6 条规则</p>
+<div class="rulecard">
+<div class="rh"><div class="rn">1</div><div class="rt">同事：跟工作有关的抱怨不发</div></div>
+<div class="rw"><b>什么时候用：</b>你想吐槽流程、领导、加班。</div>
+<div class="rd"><b>依据：</b>同事的抱怨是给同事听的，发出圈就变成了公开评价公司。</div>
+<div class="rw"><b>可以这么做：</b>工作上的不满找当事人或上级单独说，朋友圈留给生活。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">2</div><div class="rt">领导：夸过的人和说过的人，都可能刷到</div></div>
+<div class="rw"><b>什么时候用：</b>你想发一条和公司有关的动态。</div>
+<div class="rd"><b>依据：</b>你不知道哪些同事跟领导关系近，动态一旦被转到私聊，你就失去了解释的机会。</div>
+<div class="rw"><b>可以这么做：</b>涉及公司的动态只发不涉及具体人和具体事的部分；拿不准就等两天再发。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">3</div><div class="rt">客户：产品相关的吐槽先删再想</div></div>
+<div class="rw"><b>什么时候用：</b>你在吐槽某个服务、某个流程、某个行业现象。</div>
+<div class="rd"><b>依据：</b>客户刷到的次数和速度，比你预估的高得多，而且他们会记住。</div>
+<div class="rw"><b>可以这么做：</b>产品相关的负面表述，删掉公司名、品类名、具体流程，只留通用的行业观察。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">4</div><div class="rt">亲戚：不发会被传话的内容</div></div>
+<div class="rw"><b>什么时候用：</b>你发了一条关于家庭、收入、感情的内容。</div>
+<div class="rd"><b>依据：</b>亲戚看到之后，转述给你父母、给你姨、给你邻居，中间每一步都会加料。</div>
+<div class="rw"><b>可以这么做：</b>凡是可能被转述的内容，假设它会被重复十遍再发一遍。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">5</div><div class="rt">前任：默认分组可见，不是默认屏蔽</div></div>
+<div class="rw"><b>什么时候用：</b>你的分组里没有前任，但你也说不准谁会把他拉进群聊截图。</div>
+<div class="rd"><b>依据：</b>关系结束不需要公开宣布，把边界设好就行；你不知道对方那边的情况。</div>
+<div class="rw"><b>可以这么做：</b>涉及新关系的动态，用「不给谁看」或分组处理，别赌。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">6</div><div class="rt">家人：不发让他们担心的内容</div></div>
+<div class="rw"><b>什么时候用：</b>你想发一条熬夜、看病、情绪低落、辞职相关的动态。</div>
+<div class="rd"><b>依据：</b>家人看到的是「出事了」，不是你写的那层意思；他们会立刻打电话，然后问一圈亲戚。</div>
+<div class="rw"><b>可以这么做：</b>这类内容只发给你信任的两三个具体人，别放在公开动态里。</div>
+</div>
+</section>
+<section class="part" id="p4">
+<div class="part-h"><span class="pn">4</span><span class="pt">发出去之后</span></div>
+<p class="part-sub">撤回 · 被评论 · 有人点赞又不说话 · 共 6 条规则</p>
+<div class="rulecard">
+<div class="rh"><div class="rn">1</div><div class="rt">撤回救不回一切，两分钟后就晚了</div></div>
+<div class="rw"><b>什么时候用：</b>你发错了内容，想撤回。</div>
+<div class="rd"><b>依据：</b>撤回有有效时间，过了就撤不掉；对方手机上的通知也已经亮过了。</div>
+<div class="rw"><b>可以这么做：</b>发错的当下就撤，同时补一条正常内容把注意力带走，别让错误单独挂着。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">2</div><div class="rt">撤回了，补一句说明更好</div></div>
+<div class="rw"><b>什么时候用：</b>你撤回了刚才那条，对方已经看到了。</div>
+<div class="rd"><b>依据：</b>撤回本身就是信号：对方会猜你撤了什么，猜比看更麻烦。</div>
+<div class="rw"><b>可以这么做：</b>补一句「刚那条发错了，我重发」或直接发新的，把空白填上。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">3</div><div class="rt">公开的评论，不喜欢就不回</div></div>
+<div class="rw"><b>什么时候用：</b>有人在评论区说了让你不舒服的话。</div>
+<div class="rd"><b>依据：</b>公开回怼会把你的动态变成一场围观，围观的人记住的是争吵不是你原本想说的。</div>
+<div class="rw"><b>可以这么做：</b>不回复就是处理方式。想回就用一句客气的定性收住，然后不再接话。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">4</div><div class="rt">有人问你的隐私，用「不方便说」结束</div></div>
+<div class="rw"><b>什么时候用：</b>评论区有人问你收入、感情、家里情况。</div>
+<div class="rd"><b>依据：</b>含糊其辞会招来第二轮追问；直接拒绝又显得生硬。</div>
+<div class="rw"><b>可以这么做：</b>固定一句：「这个就不方便说了哈。」说完转到别的话题，不要解释为什么不方便。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">5</div><div class="rt">有人点赞又不说话，不追问也不解读</div></div>
+<div class="rw"><b>什么时候用：</b>有人点赞之后一直没说话，你反复看那条动态。</div>
+<div class="rd"><b>依据：</b>点赞是随手动作，不是不表态；你从里面读出的意思，往往是自己的投射。</div>
+<div class="rw"><b>可以这么做：</b>不解读、不私聊追问。真有话要说，直接单独聊一次，比猜省事。</div>
+</div>
+<div class="rulecard">
+<div class="rh"><div class="rn">6</div><div class="rt">被截图外传，不在评论区对线</div></div>
+<div class="rw"><b>什么时候用：</b>你的动态被转到别处，有人来评论区说难听的话。</div>
+<div class="rd"><b>依据：</b>评论区对线等于把内容再推一轮，看热闹的人会看到全部过程。</div>
+<div class="rw"><b>可以这么做：</b>不在评论区解释、不对线、不跟对方争。判断要不要回应：能澄清且不影响别人，就澄清一次；影响别人，就不回应。</div>
+</div>
+</section>
+
+    <section id="check">
+      <h2>发布前自检清单</h2>
+      <p class="muted">发之前从上往下过一遍，有一条答不上来，就先别点发送。</p>
+<div class="chk"><ul>
+<li><span class="bx"></span><span>这条动态里有几个人？他们分别会怎么读？</span></li>
+<li><span class="bx"></span><span>有没有可识别到具体人的细节（名字、脸、职位、场景）？</span></li>
+<li><span class="bx"></span><span>分组设对了吗？该看到的人看到了吗？</span></li>
+<li><span class="bx"></span><span>这条发出去，三天后我还会想发它吗？</span></li>
+<li><span class="bx"></span><span>里面有没有数字、金额、收入类信息？要不要往下拉一档？</span></li>
+<li><span class="bx"></span><span>如果被截图转出去，我会不会后悔？</span></li>
+<li><span class="bx"></span><span>转发的内容，原作者是谁？带的人是谁？</span></li>
+<li><span class="bx"></span><span>有没有一句话会让我妈担心？</span></li>
+<li><span class="bx"></span><span>有没有跟工作、客户、领导直接相关的内容？</span></li>
+<li><span class="bx"></span><span>发完五分钟内能撤，但撤了之后要不要补一句说明？</span></li>
+</ul></div>
+    </section>
+
+    <section id="test">
+      <h2>你的朋友圈边界感</h2>
+      <p class="muted">6 道题，看你是随手发、分寸稳，还是把边界收得太紧。</p>
+      <div class="qwrap" id="qwrap"></div>
+    </section>
+
+    <section id="howto">
+      <div class="card">
+        <div class="kicker">交付与使用说明</div>
+        <p>这是一份单文件网页资料，拍下后自动发货一条链接，手机浏览器打开就能用，同一条链接可以反复使用。</p>
+        <p class="muted">整个页面是单个网页文件，提前存在手机里断网也能看；手机上先存好，下次直接点开。本资料为沟通参考，不构成专业心理评估、诊断或医疗建议。</p>
+      </div>
+      <div class="disc"><b>售后说明</b><br>虚拟资料，付款后不支持退款。页面打不开或显示异常，可在订单里联系售后处理。</div>
+    </section>
+
+    <div class="foot">
+      朋友圈与社交距离感手册 · 4 部分 24 条动态发布规则<br>
+      单文件网页，手机打开即用，断网也能看
+    </div>
+  </div>
+</div>
+<script>
+var QZ = [["你要发一张合影，里面有同事、客户、还有亲戚，你会？",[["直接发，反正都是熟人。",[0,0,1]],["先看一遍每个人的处境，会介意的就不放进去。",[2,2,1]],["设成三天可见就行了。",[1,0,0]]]],["看到一篇写得很好的文章想转，你会？",[["直接转，内容好就行。",[1,0,0]],["看一眼作者是谁，再决定转不转。",[1,2,1]],["转到「不给谁看」再发出去。",[2,1,0]]]],["同事群里传出一张你吐槽公司的截图，你会？",[["在评论区解释一下我当时的意思。",[0,0,0]],["不在评论区对线，先确认还有谁看到了。",[1,2,2]],["马上再发一条说自己的观点。",[0,0,0]]]],["一条动态发出去之后，有人公开评论问你的收入，你会？",[["含糊带过，说一半留一半。",[0,1,0]],["一句「这个就不方便说了哈」收住，然后转话题。",[2,2,2]],["把真实数字说出来，显得坦然。",[0,0,0]]]],["你想发一条自己情绪很低的内容，你会？",[["发出来，让朋友安慰安慰。",[0,0,0]],["只发给信得过的两三个人。",[2,2,1]],["发出来但设三天可见。",[1,0,1]]]],["一条动态你后悔了想撤回，但已经过了撤回时间，你会？",[["算了，就这样吧。",[0,0,0]],["补一条正常的动态，别让错误单独挂着。",[1,1,2]],["再发一条说明把它盖过去。",[0,0,1]]]]];
+var RES = [["随手发型","你发之前想得少，发之后想得多。多数时候没事，偶尔一条动态会在熟人圈里绕一圈回来找你。",10,[[["发之前先过一遍名单","谁会看到这条？同事、客户、亲戚各在哪个分组，一分钟就能过完。"],["带人的内容逐个看","合影、带脸的朋友圈、转发别人的文章，逐张看一遍里面有没有人的处境。"],["气话先放草稿箱","情绪重的内容隔一晚再看，还想发再发。过夜能挡掉大部分冲动。"],["截图外传不当场对线","被截图传出去时，评论区解释等于再推一轮，该澄清的澄清一次，不该回的不回。"]]],"今天翻一遍自己前阵子十条动态，找出其中一条你可能会改设置的，改完再发一条新的。","#B46B3C"],["有分寸型","你大部分时候拿捏得住，个别场合还是会犹豫：既怕发得太冷，又怕发得太满。",20,[[["把分组当成常用工具","分组不是给不熟的人用的，是给熟但身份不同的人用的。"],["数字类内容留一层","收入、业绩、奖金这类，说量级不说具体数，意思到、靶子小。"],["隐私问题用固定句","准备一句「这个就不方便说了哈」，用熟了就不用临场想。"],["给家人单独设一个分组","会让你父母担心的内容，放进只给他们看的分组，不放公开动态。"]]],"今天把「不给谁看」这个分组建好，往里放一个人，明天发一条试一次设置顺不顺手。","#4E8C84"],["谨慎型","你几乎不越界，安全是安全的，只是发得少。朋友圈本来是拿来被看见的地方，留太多边界，别人反而读不到你。",36,[[["区分要挡的和不用挡的","工作吐槽要对同事挡，生活内容不需要挡。全部挡住等于全部没发。"],["给「不在意的人」留位置","想被某一类人看到，就设成只给这一类人看，而不是只挡不显。"],["家人那条留一句轻松话","可以不发担心的事，但可以发点让他们安心的日常。"],["转发时补一句你的看法","带人的文章转之前加一句判断，既保护自己也让朋友知道角度。"]]],"今天发一条只有三组人能看到的内容，写清楚是发给谁看的，发完看看有没有人回应。","#5B7FA6"]];
+var DIMS = [["group","分组意识"],["scene","场合判断"],["after","事后处理"]];
+var qi = 0, picks = [];
+
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.side a'));
+  var chips=[].slice.call(document.querySelectorAll('.mchip'));
+  function go(e){
+    var href=this.getAttribute('href');
+    if(!href||href.charAt(0)!=='#') return;
+    var el=document.querySelector(href);
+    if(!el) return;
+    e.preventDefault();
+    var top=el.getBoundingClientRect().top+window.pageYOffset-64;
+    window.scrollTo({top:top,behavior:'smooth'});
+  }
+  links.forEach(function(a){a.addEventListener('click',go);});
+  chips.forEach(function(a){a.addEventListener('click',go);});
+  var ids=links.map(function(a){return a.getAttribute('data-t');});
+  function highlight(){
+    var y=window.pageYOffset+90, cur='';
+    ids.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el&&el.getBoundingClientRect().top+window.pageYOffset<=y) cur=id;
+    });
+    links.forEach(function(a){a.classList.toggle('open',a.getAttribute('data-t')===cur);});
+    chips.forEach(function(a){a.classList.toggle('on',a.getAttribute('data-c')===cur);});
+  }
+  var t=null;
+  window.addEventListener('scroll',function(){if(t)return;t=setTimeout(function(){t=null;highlight();},80);});
+  highlight();
+})();
+
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('on');},1500);}
+function copyText(txt){
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){toast('已复制，去聊天框里粘上');},function(){fallback(txt);});
+  } else { fallback(txt); }
+}
+function fallback(txt){
+  var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');toast('已复制，去聊天框里粘上');}catch(e){toast('长按选中这段文字也可以复制');}
+  document.body.removeChild(ta);
+}
+document.addEventListener('click',function(e){
+  var opt=e.target.closest('.opt');
+  if(opt){pick(parseInt(opt.getAttribute('data-i'),10));return;}
+});
+
+function goSection(id){
+  var el=document.getElementById(id);
+  if(el){window.scrollTo(0,el.offsetTop-8);}
+}
+function showTest(){qi=0;picks=[];renderQ();goSection('test');}
+function renderQ(){
+  var wrap=document.getElementById('qwrap');
+  if(qi>=QZ.length){renderResult();return;}
+  var q=QZ[qi];
+  var h='<div class="qcnt">第 <b>'+(qi+1)+'</b> / '+QZ.length+' 题</div>';
+  h+='<div class="qbar"><i style="width:'+Math.round((qi+1)/QZ.length*100)+'%"></i></div>';
+  h+='<div class="qtext">'+q[0]+'</div><div class="opts">';
+  for(var i=0;i<q[1].length;i++){
+    h+='<button class="opt" data-i="'+i+'"><span class="k">'+'ABC'[i]+'</span><span>'+q[1][i][0]+'</span></button>';
+  }
+  h+='</div>';
+  wrap.innerHTML=h;
+}
+function pick(i){
+  var q=QZ[qi];
+  if(!q) return;
+  picks.push(q[1][i][1]);
+  qi++;
+  renderQ();
+}
+function renderResult(){
+  var w=0,l=0,it=0;
+  for(var i=0;i<picks.length;i++){w+=picks[i][0];l+=picks[i][1];it+=picks[i][2];}
+  var total=w+l+it;
+  var band=RES[0];
+  for(var j=0;j<RES.length;j++){ if(total<=RES[j][2]) { band=RES[j]; break; } }
+  var mx=QZ.length*2;
+  var h='<div class="res-hero" style="background:linear-gradient(135deg,'+band[5]+'22,'+band[5]+'0A)">';
+  h+='<div class="kicker" style="color:'+band[5]+'">朋友圈边界感 · 测试结果</div>';
+  h+='<div class="tname" style="color:'+band[5]+'">'+band[0]+'</div>';
+  h+='<div class="oneline" style="color:#4B5C58">'+band[1]+'</div>';
+  h+='</div>';
+  h+='<div class="bars"><div class="bt">三项得分（每项满分 '+mx+'）</div>';
+  var vals=[w,l,it];
+  for(var k=0;k<DIMS.length;k++){
+    var pct=Math.round(vals[k]/mx*100);
+    h+='<div class="barrow"><div class="bl"><span>'+DIMS[k][1]+'</span><span>'+vals[k]+' / '+mx+'</span></div>';
+    h+='<div class="bar"><i style="width:'+pct+'%"></i></div></div>';
+  }
+  h+='<div class="scoretxt">总分 '+total+' / '+(mx*3)+' 分</div>';
+  h+='<div class="scorebar"><i style="width:'+Math.round(total/(mx*3)*100)+'%"></i></div>';
+  h+='</div>';
+  h+='<div class="res-list">';
+  for(var t=0;t<band[3][0].length;t++){
+    h+='<div class="res-item"><div class="ic" style="background:'+band[5]+'">'+(t+1)+'</div><div class="tx"><b>'+band[3][0][t][0]+'</b>'+band[3][0][t][1]+'</div></div>';
+  }
+  h+='</div>';
+  h+='<div class="disc"><b>今天能完成的一个小练习</b><br>'+band[4]+'</div>';
+  h+='<button class="rbtn p" onclick="showTest()">再测一次</button>';
+  h+='<button class="rbtn s" onclick="goSection(\'top\')">回到封面</button>';
+  document.getElementById('qwrap').innerHTML=h;
+}
+</script>
+</body>
+</html>
